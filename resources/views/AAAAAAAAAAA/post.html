@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مطلب</title>
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/rating-stars.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/custom(1).css">
+</head>
+
+<body dir="rtl">
+    <div class="modal fade upgrade-modal" id="upgrade_account" tabindex="-1" aria-labelledby="upgrade_account_label"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="upgrade_account_label">ارتقا حساب کاربری</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="upgrade-acc">
+                        <div class="plan">
+                            <input type="radio" name="vip_plan" id="vip1" checked="checked" value="1">
+                            <label for="vip1" class="plan-content">
+                                <div class="icon">
+                                    <i class="fas fa-crown"></i>
+                                </div>
+                                <div class="text">
+                                    <h4 class="plan-name">اشتراک ویژه طرح عادی</h4>
+                                    <p class="plan-desc">1 ماه دسترسی نامحدود</p>
+                                </div>
+                                <div class="price">
+                                    15,000 تومان
+                                </div>
+                            </label>
+                        </div>
+                        <div class="plan">
+                            <input type="radio" name="vip_plan" id="vip2" value="2">
+                            <label for="vip2" class="plan-content">
+                                <div class="icon">
+                                    <i class="fas fa-crown"></i>
+                                </div>
+                                <div class="text">
+                                    <h4 class="plan-name">اشتراک ویژه طرح طلایی</h4>
+                                    <p class="plan-desc">3 ماه دسترسی نامحدود</p>
+                                </div>
+                                <div class="price">
+                                    40,000 تومان
+                                </div>
+                            </label>
+                        </div>
+                        <div class="plan">
+                            <input type="radio" name="vip_plan" id="vip3" value="3">
+                            <label for="vip3" class="plan-content">
+                                <div class="icon">
+                                    <i class="fas fa-crown"></i>
+                                </div>
+                                <div class="text">
+                                    <h4 class="plan-name">اشتراک ویژه طرح لاکچری</h4>
+                                    <p class="plan-desc">6 ماه دسترسی نامحدود</p>
+                                </div>
+                                <div class="price">
+                                    75,000 تومان
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="payment-info">
+                            <div class="info">
+                                <h6>
+                                    موجود کیف پول شما:
+                                    <span>10000</span> تومان
+                                </h6>
+                                <a href="#" onclick="modalfunc()">شارژ حساب</a>
+                            </div>
+
+                            <button type="submit">
+                                <i class="fas fa-rocket"></i>
+                                ارتقا بده!
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade rate-modal" id="rating_stars" tabindex="-1" aria-labelledby="rating_stars_label"
+        aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="rating_stars_label">امتیازدهی</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="feedback">
+                        <div class="rating">
+                            <form action="" method="" id="formrate">
+                                <input id="rate" type="number" style="display: none;">
+                                <input type="submit" style="display: none;">
+                            </form>
+                            <input type="radio" name="rating" id="rating-5">
+                            <label id="5" for="rating-5"></label>
+                            <input type="radio" name="rating" id="rating-4">
+                            <label id="4" for="rating-4"></label>
+                            <input type="radio" name="rating" id="rating-3">
+                            <label id="3" for="rating-3"></label>
+                            <input type="radio" name="rating" id="rating-2">
+                            <label id="2" for="rating-2"></label>
+                            <input type="radio" name="rating" id="rating-1">
+                            <label id="1" for="rating-1"></label>
+
+
+
+                            <div class="emoji-wrapper">
+                                <div class="emoji">
+                                    <svg class="rating-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <circle cx="256" cy="256" r="256" fill="#ffd93b" />
+                                        <path
+                                            d="M512 256c0 141.44-114.64 256-256 256-80.48 0-152.32-37.12-199.28-95.28 43.92 35.52 99.84 56.72 160.72 56.72 141.36 0 256-114.56 256-256 0-60.88-21.2-116.8-56.72-160.72C474.8 103.68 512 175.52 512 256z"
+                                            fill="#f4c534" />
+                                        <ellipse transform="scale(-1) rotate(31.21 715.433 -595.455)" cx="166.318"
+                                            cy="199.829" rx="56.146" ry="56.13" fill="#fff" />
+                                        <ellipse transform="rotate(-148.804 180.87 175.82)" cx="180.871" cy="175.822"
+                                            rx="28.048" ry="28.08" fill="#3e4347" />
+                                        <ellipse transform="rotate(-113.778 194.434 165.995)" cx="194.433" cy="165.993"
+                                            rx="8.016" ry="5.296" fill="#5a5f63" />
+                                        <ellipse transform="scale(-1) rotate(31.21 715.397 -1237.664)" cx="345.695"
+                                            cy="199.819" rx="56.146" ry="56.13" fill="#fff" />
+                                        <ellipse transform="rotate(-148.804 360.25 175.837)" cx="360.252" cy="175.84"
+                                            rx="28.048" ry="28.08" fill="#3e4347" />
+                                        <ellipse transform="scale(-1) rotate(66.227 254.508 -573.138)" cx="373.794"
+                                            cy="165.987" rx="8.016" ry="5.296" fill="#5a5f63" />
+                                        <path
+                                            d="M370.56 344.4c0 7.696-6.224 13.92-13.92 13.92H155.36c-7.616 0-13.92-6.224-13.92-13.92s6.304-13.92 13.92-13.92h201.296c7.696.016 13.904 6.224 13.904 13.92z"
+                                            fill="#3e4347" />
+                                    </svg>
+                                    <svg class="rating-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <circle cx="256" cy="256" r="256" fill="#ffd93b" />
+                                        <path
+                                            d="M512 256A256 256 0 0 1 56.7 416.7a256 256 0 0 0 360-360c58.1 47 95.3 118.8 95.3 199.3z"
+                                            fill="#f4c534" />
+                                        <path
+                                            d="M328.4 428a92.8 92.8 0 0 0-145-.1 6.8 6.8 0 0 1-12-5.8 86.6 86.6 0 0 1 84.5-69 86.6 86.6 0 0 1 84.7 69.8c1.3 6.9-7.7 10.6-12.2 5.1z"
+                                            fill="#3e4347" />
+                                        <path
+                                            d="M269.2 222.3c5.3 62.8 52 113.9 104.8 113.9 52.3 0 90.8-51.1 85.6-113.9-2-25-10.8-47.9-23.7-66.7-4.1-6.1-12.2-8-18.5-4.2a111.8 111.8 0 0 1-60.1 16.2c-22.8 0-42.1-5.6-57.8-14.8-6.8-4-15.4-1.5-18.9 5.4-9 18.2-13.2 40.3-11.4 64.1z"
+                                            fill="#f4c534" />
+                                        <path
+                                            d="M357 189.5c25.8 0 47-7.1 63.7-18.7 10 14.6 17 32.1 18.7 51.6 4 49.6-26.1 89.7-67.5 89.7-41.6 0-78.4-40.1-82.5-89.7A95 95 0 0 1 298 174c16 9.7 35.6 15.5 59 15.5z"
+                                            fill="#fff" />
+                                        <path
+                                            d="M396.2 246.1a38.5 38.5 0 0 1-38.7 38.6 38.5 38.5 0 0 1-38.6-38.6 38.6 38.6 0 1 1 77.3 0z"
+                                            fill="#3e4347" />
+                                        <path
+                                            d="M380.4 241.1c-3.2 3.2-9.9 1.7-14.9-3.2-4.8-4.8-6.2-11.5-3-14.7 3.3-3.4 10-2 14.9 2.9 4.9 5 6.4 11.7 3 15z"
+                                            fill="#fff" />
+                                        <path
+                                            d="M242.8 222.3c-5.3 62.8-52 113.9-104.8 113.9-52.3 0-90.8-51.1-85.6-113.9 2-25 10.8-47.9 23.7-66.7 4.1-6.1 12.2-8 18.5-4.2 16.2 10.1 36.2 16.2 60.1 16.2 22.8 0 42.1-5.6 57.8-14.8 6.8-4 15.4-1.5 18.9 5.4 9 18.2 13.2 40.3 11.4 64.1z"
+                                            fill="#f4c534" />
+                                        <path
+                                            d="M155 189.5c-25.8 0-47-7.1-63.7-18.7-10 14.6-17 32.1-18.7 51.6-4 49.6 26.1 89.7 67.5 89.7 41.6 0 78.4-40.1 82.5-89.7A95 95 0 0 0 214 174c-16 9.7-35.6 15.5-59 15.5z"
+                                            fill="#fff" />
+                                        <path
+                                            d="M115.8 246.1a38.5 38.5 0 0 0 38.7 38.6 38.5 38.5 0 0 0 38.6-38.6 38.6 38.6 0 1 0-77.3 0z"
+                                            fill="#3e4347" />
+                                        <path
+                                            d="M131.6 241.1c3.2 3.2 9.9 1.7 14.9-3.2 4.8-4.8 6.2-11.5 3-14.7-3.3-3.4-10-2-14.9 2.9-4.9 5-6.4 11.7-3 15z"
+                                            fill="#fff" />
+                                    </svg>
+                                    <svg class="rating-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <circle cx="256" cy="256" r="256" fill="#ffd93b" />
+                                        <path
+                                            d="M512 256A256 256 0 0 1 56.7 416.7a256 256 0 0 0 360-360c58.1 47 95.3 118.8 95.3 199.3z"
+                                            fill="#f4c534" />
+                                        <path
+                                            d="M336.6 403.2c-6.5 8-16 10-25.5 5.2a117.6 117.6 0 0 0-110.2 0c-9.4 4.9-19 3.3-25.6-4.6-6.5-7.7-4.7-21.1 8.4-28 45.1-24 99.5-24 144.6 0 13 7 14.8 19.7 8.3 27.4z"
+                                            fill="#3e4347" />
+                                        <path d="M276.6 244.3a79.3 79.3 0 1 1 158.8 0 79.5 79.5 0 1 1-158.8 0z"
+                                            fill="#fff" />
+                                        <circle cx="340" cy="260.4" r="36.2" fill="#3e4347" />
+                                        <g fill="#fff">
+                                            <ellipse transform="rotate(-135 326.4 246.6)" cx="326.4" cy="246.6" rx="6.5"
+                                                ry="10" />
+                                            <path d="M231.9 244.3a79.3 79.3 0 1 0-158.8 0 79.5 79.5 0 1 0 158.8 0z" />
+                                        </g>
+                                        <circle cx="168.5" cy="260.4" r="36.2" fill="#3e4347" />
+                                        <ellipse transform="rotate(-135 182.1 246.7)" cx="182.1" cy="246.7" rx="10"
+                                            ry="6.5" fill="#fff" />
+                                    </svg>
+                                    <svg class="rating-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <circle cx="256" cy="256" r="256" fill="#ffd93b" />
+                                        <path
+                                            d="M407.7 352.8a163.9 163.9 0 0 1-303.5 0c-2.3-5.5 1.5-12 7.5-13.2a780.8 780.8 0 0 1 288.4 0c6 1.2 9.9 7.7 7.6 13.2z"
+                                            fill="#3e4347" />
+                                        <path
+                                            d="M512 256A256 256 0 0 1 56.7 416.7a256 256 0 0 0 360-360c58.1 47 95.3 118.8 95.3 199.3z"
+                                            fill="#f4c534" />
+                                        <g fill="#fff">
+                                            <path
+                                                d="M115.3 339c18.2 29.6 75.1 32.8 143.1 32.8 67.1 0 124.2-3.2 143.2-31.6l-1.5-.6a780.6 780.6 0 0 0-284.8-.6z" />
+                                            <ellipse cx="356.4" cy="205.3" rx="81.1" ry="81" />
+                                        </g>
+                                        <ellipse cx="356.4" cy="205.3" rx="44.2" ry="44.2" fill="#3e4347" />
+                                        <g fill="#fff">
+                                            <ellipse transform="scale(-1) rotate(45 454 -906)" cx="375.3" cy="188.1"
+                                                rx="12" ry="8.1" />
+                                            <ellipse cx="155.6" cy="205.3" rx="81.1" ry="81" />
+                                        </g>
+                                        <ellipse cx="155.6" cy="205.3" rx="44.2" ry="44.2" fill="#3e4347" />
+                                        <ellipse transform="scale(-1) rotate(45 454 -421.3)" cx="174.5" cy="188" rx="12"
+                                            ry="8.1" fill="#fff" />
+                                    </svg>
+                                    <svg class="rating-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <circle cx="256" cy="256" r="256" fill="#ffd93b" />
+                                        <path
+                                            d="M512 256A256 256 0 0 1 56.7 416.7a256 256 0 0 0 360-360c58.1 47 95.3 118.8 95.3 199.3z"
+                                            fill="#f4c534" />
+                                        <path
+                                            d="M232.3 201.3c0 49.2-74.3 94.2-74.3 94.2s-74.4-45-74.4-94.2a38 38 0 0 1 74.4-11.1 38 38 0 0 1 74.3 11.1z"
+                                            fill="#e24b4b" />
+                                        <path
+                                            d="M96.1 173.3a37.7 37.7 0 0 0-12.4 28c0 49.2 74.3 94.2 74.3 94.2C80.2 229.8 95.6 175.2 96 173.3z"
+                                            fill="#d03f3f" />
+                                        <path
+                                            d="M215.2 200c-3.6 3-9.8 1-13.8-4.1-4.2-5.2-4.6-11.5-1.2-14.1 3.6-2.8 9.7-.7 13.9 4.4 4 5.2 4.6 11.4 1.1 13.8z"
+                                            fill="#fff" />
+                                        <path
+                                            d="M428.4 201.3c0 49.2-74.4 94.2-74.4 94.2s-74.3-45-74.3-94.2a38 38 0 0 1 74.4-11.1 38 38 0 0 1 74.3 11.1z"
+                                            fill="#e24b4b" />
+                                        <path
+                                            d="M292.2 173.3a37.7 37.7 0 0 0-12.4 28c0 49.2 74.3 94.2 74.3 94.2-77.8-65.7-62.4-120.3-61.9-122.2z"
+                                            fill="#d03f3f" />
+                                        <path
+                                            d="M411.3 200c-3.6 3-9.8 1-13.8-4.1-4.2-5.2-4.6-11.5-1.2-14.1 3.6-2.8 9.7-.7 13.9 4.4 4 5.2 4.6 11.4 1.1 13.8z"
+                                            fill="#fff" />
+                                        <path
+                                            d="M381.7 374.1c-30.2 35.9-75.3 64.4-125.7 64.4s-95.4-28.5-125.8-64.2a17.6 17.6 0 0 1 16.5-28.7 627.7 627.7 0 0 0 218.7-.1c16.2-2.7 27 16.1 16.3 28.6z"
+                                            fill="#3e4347" />
+                                        <path
+                                            d="M256 438.5c25.7 0 50-7.5 71.7-19.5-9-33.7-40.7-43.3-62.6-31.7-29.7 15.8-62.8-4.7-75.6 34.3 20.3 10.4 42.8 17 66.5 17z"
+                                            fill="#e24b4b" />
+                                    </svg>
+                                    <svg class="rating-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <g fill="#ffd93b">
+                                            <circle cx="256" cy="256" r="256" />
+                                            <path
+                                                d="M512 256A256 256 0 0 1 56.8 416.7a256 256 0 0 0 360-360c58 47 95.2 118.8 95.2 199.3z" />
+                                        </g>
+                                        <path
+                                            d="M512 99.4v165.1c0 11-8.9 19.9-19.7 19.9h-187c-13 0-23.5-10.5-23.5-23.5v-21.3c0-12.9-8.9-24.8-21.6-26.7-16.2-2.5-30 10-30 25.5V261c0 13-10.5 23.5-23.5 23.5h-187A19.7 19.7 0 0 1 0 264.7V99.4c0-10.9 8.8-19.7 19.7-19.7h472.6c10.8 0 19.7 8.7 19.7 19.7z"
+                                            fill="#e9eff4" />
+                                        <path
+                                            d="M204.6 138v88.2a23 23 0 0 1-23 23H58.2a23 23 0 0 1-23-23v-88.3a23 23 0 0 1 23-23h123.4a23 23 0 0 1 23 23z"
+                                            fill="#45cbea" />
+                                        <path
+                                            d="M476.9 138v88.2a23 23 0 0 1-23 23H330.3a23 23 0 0 1-23-23v-88.3a23 23 0 0 1 23-23h123.4a23 23 0 0 1 23 23z"
+                                            fill="#e84d88" />
+                                        <g fill="#38c0dc">
+                                            <path
+                                                d="M95.2 114.9l-60 60v15.2l75.2-75.2zM123.3 114.9L35.1 203v23.2c0 1.8.3 3.7.7 5.4l116.8-116.7h-29.3z" />
+                                        </g>
+                                        <g fill="#d23f77">
+                                            <path
+                                                d="M373.3 114.9l-66 66V196l81.3-81.2zM401.5 114.9l-94.1 94v17.3c0 3.5.8 6.8 2.2 9.8l121.1-121.1h-29.2z" />
+                                        </g>
+                                        <path
+                                            d="M329.5 395.2c0 44.7-33 81-73.4 81-40.7 0-73.5-36.3-73.5-81s32.8-81 73.5-81c40.5 0 73.4 36.3 73.4 81z"
+                                            fill="#3e4347" />
+                                        <path
+                                            d="M256 476.2a70 70 0 0 0 53.3-25.5 34.6 34.6 0 0 0-58-25 34.4 34.4 0 0 0-47.8 26 69.9 69.9 0 0 0 52.6 24.5z"
+                                            fill="#e24b4b" />
+                                        <path
+                                            d="M290.3 434.8c-1 3.4-5.8 5.2-11 3.9s-8.4-5.1-7.4-8.7c.8-3.3 5.7-5 10.7-3.8 5.1 1.4 8.5 5.3 7.7 8.6z"
+                                            fill="#fff" opacity=".2" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-6 header-right">
+                    <a href="#">
+                        <img src="img/SUTCAMPLogo.png" alt="لوگو سوتک کمپ">
+                    </a>
+                    <div class="search-bar">
+                        <form>
+                            <input type="search" class="form-control" name="" id=""
+                                placeholder="عبارتی برای جستجو وارد کنید...">
+                        </form>
+                    </div>
+                </div>
+                <div class="col-6 header-left">
+                    <div class="user-bar">
+                        <div class="avatar">
+                            <img src="img/profile.jpg" alt="">
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="user-info">
+                            <div class="dropdown">
+                                <a class="usermenu" href="#" type="button" id="usermenu" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <span>عباس مهربانیان</span>
+                                    <i class="fas fa-sort-down"></i>
+                                </a>
+                                <ul class="dropdown-menu animate__animated animate__fadeInUp animate__faster"
+                                    aria-labelledby="usermenu">
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fas fa-user-alt"></i>
+                                            <span>مشاهده پروفایل</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fas fa-sign-out-alt"></i>
+                                            <span>خروج از حساب</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="account-type">اشتراک عادی</div>
+                        </div>
+                    </div>
+                    <div class="notif-bell">
+                        <i class="fas fa-bell"></i>
+                        <div class="new"></div>
+                    </div>
+
+                    <!-- Not logged in -->
+                    <!-- <a href="#" class="btn">ورود</a>
+                    <a href="#" class="btn">ثبت‌نام</a> -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="منوی ناوبری">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="index" href="#">صفحه اصلی</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">درباره ما</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">سوالات متداول</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">تماس با ما</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">دسته بندی‌ها</a>
+                    </li>
+                </ul>
+                <button class="btn-upgrade" type="submit" data-bs-toggle="modal" data-bs-target="#upgrade_account">
+                    <i class="fas fa-crown"></i>
+                    <span>ویژه شوید!</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <div class="card single-post" data-aos="zoom-in">
+                        <div class="post-img">
+                            <img src="img/post.jpg" class="card-img-top" alt="تصویر مطلب">
+                            <div class="overlay"></div>
+
+                            <div class="post-btns">
+                                <div class="post-btn" data-bs-toggle="tooltip" data-bs-placement="top"
+                                    title="به اشتراک گذاری">
+                                    <i class="fas fa-share-square" onclick="share()"></i>
+                                </div>
+                                    <div class="content sharew">
+                                        <ul class="icons">
+                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                            <a href="#"><i class="fab fa-twitter"></i></a>
+                                            <a href="#"><i class="fab fa-instagram"></i></a>
+                                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                                            <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                                        </ul>
+                                </div>
+                                <a href="#" class="post-btn" data-bs-toggle="modal" data-bs-target="#rating_stars"
+                                    data-bs-toggle="tooltip" data-bs-placement="top" title="امتیازدهی">
+                                    <i class="fas fa-star"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">یک عنوان تستی برای این مطلب</h4>
+                            <div class="card-text">
+                                <p>
+                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                                    گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و
+                                    برای شرایط فعلی...
+                                </p>
+                                <p>
+                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                                    گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و
+                                    برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی
+                                    می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و
+                                    متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی
+                                    الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید
+                                    داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان
+                                    مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود
+                                    طراحی اساسا مورد استفاده قرار گیرد.
+
+                                </p>
+
+                                <p>
+                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                                    گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و
+                                    برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی
+                                    می باشد. کتابهای زیادی در شصت و سه درصد گذشته.
+                                </p>
+
+                                <p>
+                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                                    گرافیک است. چاپگرها و متون بلکه روزنامه.
+                                </p>
+
+                                <p>
+                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                                    گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و
+                                    برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی
+                                    می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و
+                                    متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی
+                                    الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید
+                                    داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان
+                                    مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود
+                                    طراحی اساسا مورد استفاده قرار گیرد.
+
+                                </p>
+
+                                <div class="need-vip">
+                                    <div class="vip-box">
+                                        <div class="icons">
+                                            <i class="fas fa-sad-tear"></i>
+                                        </div>
+                                        <div class="text">
+                                            برای خواندن ادامه این مطلب بایستی حساب خود را ارتقا دهید!
+                                        </div>
+                                        <button class="btn-upgrade" type="submit" data-bs-toggle="modal"
+                                            data-bs-target="#upgrade_account">
+                                            <i class="fas fa-crown"></i>
+                                            <span>ارتقاء حساب</span>
+                                        </button>
+                                    </div>
+                                    <div class="blurred-bg">
+                                        <p>
+                                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                                            طراحان
+                                            گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم
+                                            است و
+                                            برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای
+                                            کاربردی
+                                            می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان
+                                            جامعه و
+                                            متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای
+                                            علی
+                                            الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می
+                                            توان
+                                            امید
+                                            داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد
+                                            وزمان
+                                            مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای
+                                            موجود
+                                            طراحی اساسا مورد استفاده قرار گیرد.
+
+                                        </p>
+
+                                        <p>
+                                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                                            طراحان
+                                            گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم
+                                            است و
+                                            برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای
+                                            کاربردی
+                                            می باشد. کتابهای زیادی در شصت و سه درصد گذشته.
+                                        </p>
+                                        <p>
+                                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                                            طراحان
+                                            گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم
+                                            است و
+                                            برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای
+                                            کاربردی
+                                            می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان
+                                            جامعه و
+                                            متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای
+                                            علی
+                                            الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.
+
+                                        </p>
+
+                                        <p>
+                                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                                            طراحان
+                                            گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم
+                                            است و
+                                            برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای
+                                            کاربردی
+                                            می باشد. کتابهای زیادی در شصت و سه درصد گذشته.
+                                        </p>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mt-4 comment-section" data-aos="zoom-in">
+                        <div class="section-header">
+                            <h4>دیدگاه‌ها</h4>
+                            <p>یک دیدگاه برای این پست بزارید!</p>
+                        </div>
+
+                        <div class="commtent-box">
+                            <img src="img/profile.jpg" alt="" class="comment-user">
+                            <div class="comment-editor">
+                                <form action="">
+                                    <textarea name="comment" id="editor"></textarea>
+                                    <button type="submit" class="btn btn-dark mt-3 float-end">ثبت کن!</button>
+                                </form>
+                            </div>
+
+                            <!-- Not logged in -->
+                            <!-- <p>
+                                برای ثبت دیدگاه
+                                <a href="#">وارد شوید</a>
+                                و یا
+                                <a href="#">یا ثبت‌نام کنید!</a>
+                            </p> -->
+                        </div>
+
+                        <div class="comments-container">
+                            <div class="comment-wrapper">
+                                <div class="commtent-box">
+                                    <img src="img/profile.jpg" alt="" class="comment-user">
+                                    <div class="comment-text">
+                                        <h6 class="comment-author">عباس مهربانیان</h6>
+                                        <div class="comment-date">3 روز پیش</div>
+                                        <div class="content">
+                                            <p>
+                                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
+                                                از
+                                                طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                                                سطرآنچنان که
+                                                لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف
+                                                بهبود
+                                                ابزارهای کاربردی می باشد.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="comment-wrapper">
+                                    <div class="commtent-box">
+                                        <img src="img/profile.jpg" alt="" class="comment-user">
+                                        <div class="comment-text">
+                                            <h6 class="comment-author">عباس مهربانیان</h6>
+                                            <div class="comment-date">3 روز پیش</div>
+                                            <div class="content">
+                                                <p>
+                                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                                    استفاده
+                                                    از
+                                                    طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                                                    سطرآنچنان که
+                                                    لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با
+                                                    هدف
+                                                    بهبود
+                                                    ابزارهای کاربردی می باشد.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="comment-wrapper">
+                                        <div class="commtent-box">
+                                            <img src="img/profile.jpg" alt="" class="comment-user">
+                                            <div class="comment-text">
+                                                <h6 class="comment-author">عباس مهربانیان</h6>
+                                                <div class="comment-date">3 روز پیش</div>
+                                                <div class="content">
+                                                    <p>
+                                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                                        استفاده
+                                                        از
+                                                        طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                                                        سطرآنچنان که
+                                                        لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع
+                                                        با
+                                                        هدف
+                                                        بهبود
+                                                        ابزارهای کاربردی می باشد.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="comment-wrapper">
+                                <div class="commtent-box">
+                                    <img src="img/profile.jpg" alt="" class="comment-user">
+                                    <div class="comment-text">
+                                        <h6 class="comment-author">عباس مهربانیان</h6>
+                                        <div class="comment-date">3 روز پیش</div>
+                                        <div class="content">
+                                            <p>
+                                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                                استفاده
+                                                از
+                                                طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                                                سطرآنچنان که
+                                                لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع
+                                                با
+                                                هدف
+                                                بهبود
+                                                ابزارهای کاربردی می باشد.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 sidebar">
+                    <div class="card author" data-aos="zoom-in">
+                        <img src="img/profile.jpg" class="article-writer" alt="نوسینده مطلب">
+                        <h5 class="author-name">عباس مهربانیان</h5>
+
+                        <div class="card-body">
+                            <h6 class="card-subtitle">درباره نویسنده</h6>
+                            <p class="bio">
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط
+                                فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                            </p>
+
+                            <h6 class="card-subtitle mt-4 mb-3">آمار نویسنده</h6>
+                            <div class="author-stats">
+                                <div class="author-stat">
+                                    <span class="num">213</span>
+                                    <span class="text">مطلب</span>
+                                </div>
+                                <div class="author-stat">
+                                    <span class="num">4.2</span>
+                                    <span class="text">امتیاز کل</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card donate" data-aos="zoom-in">
+                        <h5 class="card-title">
+                            <i class="fas fa-donate"></i>
+                            حمایت از نویسنده
+                        </h5>
+
+                        <div class="card-text">
+                            <p>
+                                این مطلب رایگان بود! درصورتی که برای شما مفید بود میتوانید از نویسنده این مطلب حمایت
+                                کنید.
+                            </p>
+
+                            <form action="">
+                                <input type="number" name="" id="" class="form-control"
+                                    placeholder="...مبلغ حمایت را وارد کنید">
+                                <small class="form-error">مبلغ حمایت حداقل باید ۱۰۰۰ تومان باشد.</small>
+
+                                <button type="button" id="pay_donation" class="blue-btn mt-3">بفرست بره!</button>
+                            </form>
+                        </div>
+
+                        <div id="payment_success" class="success-overlay">
+                            <div class="content">
+                                <i class="fas fa-smile-wink"></i>
+                                <h4>مرسی!</h4>
+                                <p>براش فرستادیم!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modall">
+                        <div class="card donate mr-4">
+
+                            <h5 class="card-title mr-4">
+
+                                <i class="fas fa-donate"></i>
+                                شارژ
+
+                                <button type="button" class="btnclose btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+
+                            </h5>
+
+                            <div class="card-text mr-4">
+                                <p class="mr-4">
+                                    مبلغ مورد نظر جهت افزایش موجودی کیف پول خود وارد کنید
+                                </p>
+
+                                <form action="" method="get">
+                                    <input type="number" name="" id="" class="form-control"
+                                        placeholder="... میزان شارژ حساب را وارد کنید">
+                                    <small class="form-error">مبلغ شارژ حداقل باید ۱۰۰۰ تومان باشد.</small>
+
+                                    <button type="button" id="pay_donation" class="blue-btn mt-3">شارژ کن!</button>
+                                </form>
+                            </div>
+
+                            <div id="payment_success" class="success-overlay">
+                                <div class="content">
+                                    <i class="fas fa-smile-wink"></i>
+                                    <h4>مرسی!</h4>
+                                    <p>براش فرستادیم!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-break-md"></div>
+        
+    </main>
+
+    <footer>
+        <div class="footer-header">
+            <div class="container">
+                <div class="text">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>
+                        پاسخگوی سوالات شما در واتس‌اپ هستیم
+                    </span>
+                </div>
+                <div class="buttons">
+                    <a href="#" class="whatsapp-btn">چت در واتس‌اپ</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-main container">
+            <div class="row">
+                <div class="col-12 col-lg-4 footer-section">
+                    <h4 class="footer-title">
+                        درباره ما
+                    </h4>
+                    <p class="footer-text">
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                        چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی
+                        مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد
+                    </p>
+                    <div class="social-media-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram-square"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter-square"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-google-plus-square"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 footer-section">
+                    <h4 class="footer-title">
+                        پیوندها
+                    </h4>
+                    <ul class="friend-links">
+                        <li class="friend-link-item">
+                            <a href="#" class="friend-link">
+                                <i class="fas fa-link"></i>
+                                <span>انجمن علمی کامپیوتر</span>
+                            </a>
+                        </li>
+                        <li class="friend-link-item">
+                            <a href="#" class="friend-link">
+                                <i class="fas fa-link"></i>
+                                <span>وبسایت وزارت علوم و فناوری اطلاعات</span>
+                            </a>
+                        </li>
+                        <li class="friend-link-item">
+                            <a href="#" class="friend-link">
+                                <i class="fas fa-link"></i>
+                                <span>انجمن علمی کامپیوتر</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-5 footer-section">
+                    <div style="width: 100%" class="map">
+                        <iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0"
+                            marginwidth="0"
+                            src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87%20%D8%B5%D9%86%D8%B9%D8%AA%DB%8C%20%D8%B4%DB%8C%D8%B1%D8%A7%D8%B2+(%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87%20%D8%B5%D9%86%D8%B9%D8%AA%DB%8C%20%D8%B4%DB%8C%D8%B1%D8%A7%D8%B2)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-copy-right container">
+            <div class="row">
+                <div class="col-12 text-center text-md-start col-md-6">
+                    <p>تمام حقوق برای وب‌سایت سوتک کمپ محفوظ میباشد.</p>
+                </div>
+                <div class="col-12 text-center text-md-end col-md-6">
+                    <code>&lt;/&gt; w/ 💙 for SUTCamp</code>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/ckeditor/ckeditor.js"></script>
+
+    <script>
+        AOS.init();
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+
+        $(document).ready(function () {
+
+            $('#pay_donation').click(function () {
+                $('#payment_success').fadeIn().css({ display: 'flex' }).delay(3000).fadeOut();
+            });
+            $(".modall").hide();
+            $(".sharew").hide();
+
+        });
+
+        CKEDITOR.replace('editor');
+
+        function modalfunc() {
+            $(".modall").show();
+        }
+
+        $(".btnclose").click(function () {
+            $(".modall").hide();
+        });
+        function share() {
+            /* Select the text field */
+            // var url = window.location.href;
+            // navigator.clipboard.writeText(url);
+            // alert("لینک مطلب در کلیپ بورد کپی شد" + "\n\n" + url);
+            // $("#popup").show();
+            $(".sharew").toggle();
+        }
+
+
+
+
+
+
+
+
+        function sleep(milliseconds) {
+            const date = Date.now();
+            let currentDate = null;
+            do {
+                currentDate = Date.now();
+            } while (currentDate - date < milliseconds);
+        }
+
+
+
+        var rate = 0;
+        //rating form
+        $("#1").click(function () {
+            rate = 1;
+            $("#rate").val(rate);
+            var log = $("#rate").val();
+            $("#formrate").submit();
+            sleep(1000);
+            alert("value =  " + log + "    form submited!");
+
+        });
+        $("#2").click(function () {
+            rate = 2;
+            $("#rate").val(rate);
+            var log = $("#rate").val();
+            $("#formrate").submit();
+            sleep(1000);
+            alert("value =  " + log + "    form submited!");
+
+        });
+        $("#3").click(function () {
+            rate = 3;
+            $("#rate").val(rate);
+            var log = $("#rate").val();
+            $("#formrate").submit();
+            sleep(1000);
+            alert("value =  " + log + "    form submited!");
+
+        });
+        $("#4").click(function () {
+            rate = 4;
+            $("#rate").val(rate);
+            var log = $("#rate").val();
+            $("#formrate").submit();
+            sleep(1000);
+            alert("value =  " + log + "    form submited!");
+
+        });
+        $("#5").click(function () {
+            rate = 5;
+            $("#rate").val(rate);
+            var log = $("#rate").val();
+            $("#formrate").submit();
+            sleep(1000);
+            alert("value =  " + log + "    form submited!");
+
+        });
+
+
+
+    
+
+    </script>
+
+</body>
+
+</html>
